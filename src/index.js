@@ -2,13 +2,10 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from 'components/App'
 
-//Redux setup
-import {Provider} from 'react-redux' //provider is the redux store
-import { createStore } from 'redux' // connect function to cnenct to redux store
-import reducers from 'reducers'
+import Root from 'Root'
 
 ReactDOM.render(
-    <Provider store={createStore(reducers,{})}>
+    <Root store={createStore(reducers,{})}>
         <App />
-    </Provider>
+    </Root>
 , document.querySelector('#root'))
