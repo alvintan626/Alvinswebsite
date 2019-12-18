@@ -3,9 +3,8 @@ import ReactDOM from 'react-dom'
 import App from 'components/App'
 
 import Root from 'Root'
-
 ReactDOM.render(
-    <Root store={createStore(reducers,{})}>
+    <Root>
         <App />
     </Root>
 , document.querySelector('#root'))
