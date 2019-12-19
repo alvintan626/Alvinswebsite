@@ -4,10 +4,11 @@ import {Provider} from 'react-redux' //provider is the redux store
 import { createStore } from 'redux' // connect function to cnenct to redux store
 import reducers from 'reducers'
 
-export default props => {
+                // props in these parameters
+export default ({children,initialState = {}}) => {
     return (
-        <Provider store={createStore(reducers,{})}>
-            {props.children}
+        <Provider store={createStore(reducers,initialState)}>
+            {children}
         </Provider>
     )
 }
