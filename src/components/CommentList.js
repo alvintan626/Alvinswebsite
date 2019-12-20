@@ -5,7 +5,6 @@ class CommentList extends Component {
     
 
     renderComments(){
-        console.log(this.props)
         return this.props.comments.map((comment) => {
             return <li key={comment}>{comment}</li>
         })
@@ -23,7 +22,6 @@ class CommentList extends Component {
 }
 
 function mapStateToProps(state){
-    console.log(state)
     return {comments: state.comments}
 }
 export default connect(mapStateToProps)(CommentList)
